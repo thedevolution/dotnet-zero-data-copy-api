@@ -9,3 +9,8 @@ https://app.snowflake.com/marketplace/listing/GZT1ZJ0SBC/deep-sync-u-s-zip-code-
 Upon importing the marketplace data, need to grant privileges to your database role that is associated to your database user, something like the following command:
 
 `GRANT IMPORTED PRIVILEGES ON DATABASE U_S__ZIP_CODE_METADATA TO ROLE MY_APPLICATION_ROLE;`
+
+## .NET
+Update your connection settings with your credentials:
+
+`"SnowflakeConnection": "account=<<ACCOUNT>>;user=<<USER_ID>>;password=<<PASSWORD>>;db=<<YOUR_DB>>;schema=<<YOUR_SCHEMA>>;warehouse=<<YOUR_WAREHOUSE>>;"`
