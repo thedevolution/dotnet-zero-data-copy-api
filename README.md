@@ -1,7 +1,7 @@
 # .NET Zero-Data Copy API (Snowflake & Databricks)
-Full-stack developers intro to eliminating data duplication, reducing storage costs, and ensuring access of the most up-to-date information
+Full-stack developers intro to eliminating data duplication, reducing storage costs, and ensuring access of the most up-to-date information.  Also referred to as Shallow Copy/Clone.
 
-## Snowflake
+## Snowflake's Zero-Copy Cloning 
 Steps to setting up Snowflake.
 Run the following SQL commands in a worksheet:
 ```
@@ -64,7 +64,7 @@ Update your app.settings.json with your credentials:
 		"SnowflakeConnection": "ACCOUNT=<<YOUR_ACCOUNT>>;USER=<<YOUR_USER_ID>>;PASSWORD=<<YOUR_PASSWORD>>;WAREHOUSE=<<YOUR_WAREHOUSE>>;ROLE=<<YOUR_ROLE>>;"
 	}
 ```
-## Databricks
+## Databricks' Shallow Clone
 Steps to setting up Databricks.
 Run the following SQL commands in a notebook:
 ```
