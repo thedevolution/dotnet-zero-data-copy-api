@@ -1,23 +1,11 @@
-using Microsoft.EntityFrameworkCore;
-using user_finder.API.Repositories;
-using user_finder.API.Repositories.EF;
+using user_finder.API.Repositories.EF.DataPlatforms;
 using user_finder.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //////////////////////////////// ADDITIONS to Program.cs //////////////////////////////////////
-// Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("SnowflakeConnection");
-builder.Services.AddDbContext<DatabaseContext>(dbContextOptions =>
-{
-	dbContextOptions.UseSnowflake(connectionString);
-	dbContextOptions.LogTo(Console.WriteLine, LogLevel.Information); // or LogLevel.Debug for more detail
-	dbContextOptions.EnableSensitiveDataLogging(); // WARNING: Only use in development!
-});
-
-builder.Services.AddTransient<IFoundUserRepository, FoundUserRepository>();
+builder.ConfigureDataPlatform();
 builder.Services.AddTransient<IUserFinderService, UserFinderService>();
-
 //////////////////////////////// End ADDITIONS to Program.cs //////////////////////////////////////
 
 builder.Services.AddControllers();

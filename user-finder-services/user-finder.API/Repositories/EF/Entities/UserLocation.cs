@@ -2,6 +2,7 @@
 
 namespace user_finder.API.Repositories.EF.Entities
 {
+	[Table("USER_LOCATION")]
 	internal class UserLocation
     {
         [Column("USER_LOCATION_ID")]

@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CData.Databricks" Version="25.0.9358" />
+    <PackageReference Include="CData.Databricks.EntityFrameworkCore8" Version="25.0.9361" />
     <PackageReference Include="EFCore.Snowflake" Version="8.0.8" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
