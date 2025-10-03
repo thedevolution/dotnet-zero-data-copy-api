@@ -8,7 +8,7 @@ namespace user_finder.API.Repositories.EF.DataPlatforms
 		{
 		}
 
-		protected override string GetUsersByZipCode(string zip)
+		protected override string GetUsersByZipCodeSqlQuery(string zip)
 		{
 			return $@"
             SELECT
@@ -27,7 +27,7 @@ namespace user_finder.API.Repositories.EF.DataPlatforms
             WHERE UL.ZIP = {zip}";
 		}
 
-		protected override string GetUsersCloseToZipcodeQuery(string zipCode, double proximityInMiles)
+		protected override string GetUsersCloseToZipcodeSqlQuery(string zipCode, double proximityInMiles)
 		{
 			return $@"
             SELECT
